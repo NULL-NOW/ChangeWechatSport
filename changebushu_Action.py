@@ -22,6 +22,18 @@ headers = {
 # 发送 POST 请求
 response = requests.post(url, data=data, headers=headers)
 
+random_number = random.randint(10000, 20000)
+
+# 定义要发送的参数
+data = {
+    "user": "19707733786@163.com",
+    "password": "t19707733786",
+    "step": random_number,
+    "ver": "cxydzsv3.2"
+}
+
+response = requests.post(url, data=data, headers=headers)
+
 # 输出响应内容
 print("状态码:", response.status_code)
 print("响应内容:", response.text)
