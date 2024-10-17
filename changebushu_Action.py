@@ -34,6 +34,18 @@ data = {
 
 response = requests.post(url, data=data, headers=headers)
 
+random_number = random.randint(10000, 20000)
+
+# 定义要发送的参数
+data = {
+    "user": "1452792466@qq.com",
+    "password": "wh314415",
+    "step": random_number,
+    "ver": "cxydzsv3.2"
+}
+
+response = requests.post(url, data=data, headers=headers)
+
 # 输出响应内容
 print("状态码:", response.status_code)
 print("响应内容:", response.text)
